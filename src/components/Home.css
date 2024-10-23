@@ -87,3 +87,23 @@
     color: rgb(202, 202, 202);
     font-size: 40px;
 }
+
+
+#hyperspace-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  .content, .Bottom {
+    position: relative;
+    z-index: 2; /* Ensure content is above video */
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
