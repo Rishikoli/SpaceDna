@@ -1,0 +1,4 @@
+body {
+    cursor: url('path/to/your/rocket-image.png'), auto; /* Fallback to default cursor */
+  }
+  

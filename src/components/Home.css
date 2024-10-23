@@ -1,0 +1,88 @@
+/* Container for the Home Component */
+.home-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background Video Styling */
+#background-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Content over the Video */
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.space-dna {
+    display: flex;
+    justify-content: space-evenly; /* Positions elements on opposite sides */
+    align-items: center; /* Centers elements vertically */
+    width: 100%; /* Make the container take the full width of its parent */
+    padding: 0 30px; /* Optional: Adds some padding on the sides */
+    color: white;
+    font-size: 120px;
+    font-weight: thin;
+    background: rgb(123, 182, 241);
+    /* background: linear-gradient(0deg, rgba(189,195,199,1) 44%,  rgba(44,62,80,1)51%); */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-family: 'library 3 am';
+    letter-spacing: 50px;
+}
+
+.left, .right {
+    margin: 0;
+}
+
+.Bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between; /* Distributes space between the items */
+    align-items: center;
+    padding: 10px;
+}
+.Bottom1{
+    width:20% ;/* Ensures equal width */
+    height:100%;
+    font-weight: bolder;
+    font-family: 'sans-serif';
+    color: aliceblue;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 40px;
+    bottom: 0;
+}
+.Bottom2{
+    width:60% ;/* Ensures equal width */
+    height:100%;
+    top:5px;
+    font-weight: bolder;
+    font-family: 'sans-serif';
+}
+.Bottom3{
+    width:20% ;/* Ensures equal width */
+    height:50%;
+    font-weight: bolder;
+    font-family: 'sans-serif';
+    color: rgb(202, 202, 202);
+    font-size: 40px;
+}
