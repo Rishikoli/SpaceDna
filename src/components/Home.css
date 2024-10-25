@@ -1,109 +1,142 @@
 /* Container for the Home Component */
 .home-container {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Background Video Styling */
 #background-video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 /* Content over the Video */
 .content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 40%;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
 }
 
 .space-dna {
-    display: flex;
-    justify-content: space-evenly; /* Positions elements on opposite sides */
-    align-items: center; /* Centers elements vertically */
-    width: 100%; /* Make the container take the full width of its parent */
-    padding: 0 30px; /* Optional: Adds some padding on the sides */
-    color: white;
-    font-size: 120px;
-    font-weight: thin;
-    background: rgb(123, 182, 241);
-    /* background: linear-gradient(0deg, rgba(189,195,199,1) 44%,  rgba(44,62,80,1)51%); */
+  display: flex;
+  justify-content: space-evenly; /* Positions elements on opposite sides */
+  align-items: center; /* Centers elements vertically */
+  height: 40%;
+  width: 100%; /* Make the container take the full width of its parent */
+  padding: 0 15px; /* Optional: Adds some padding on the sides */
+  color: white;
+  font-size: 120px;
+  font-weight: thin;
+  background: rgb(123, 182, 241);
+  /* background: linear-gradient(0deg, rgba(189,195,199,1) 44%,  rgba(44,62,80,1)51%); */
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "library 3 am";
+  letter-spacing: 50px;
+  /* border: 1px solid white; */
+}
+
+.left {
+  margin: 0;
+  height: 100%;
+
+    width: 50% ;
+}
+.right {
+  margin: 0;
+  height: 100%;
+ 
+    width: 50% ;
+}
+.line-drawing {
+    font-size: 80px;
+    fill: none; /* Makes the inside of the text transparent */
+    stroke: #fff; /* Text stroke color */
+    stroke-width: 2; /* Thickness of the line */
+    stroke-dasharray: 500; /* Adjust for dash effect */
+    stroke-dashoffset: 500; /* Hide the text initially */
+    animation: drawLine 3s linear infinite; /* Infinite looping */
+  }
   
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    font-family: 'library 3 am';
-    letter-spacing: 50px;
+  @keyframes drawLine {
+    0% {
+      stroke-dashoffset: 300; /* Hidden text */
+    }
+    50% {
+      stroke-dashoffset: 0; /* Reveal the text */
+    }
+    100% {
+      stroke-dashoffset: 300; /* Hide the text again */
+    }
+  }
+  
+.Bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border: 1px solid red;
+  height: 80%;
+  display: flex;
+  justify-content: space-between; /* Distributes space between the items */
+  align-items: center;
 }
-
-.left, .right {
-    margin: 0;
+.Bottom1 {
+  width: 20%; /* Ensures equal width */
+  height: 100%;
+  font-weight: bolder;
+  font-family: "sans-serif";
+  color: aliceblue;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 40px;
+  bottom: 0;
 }
-
-.Bottom{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 70%;
-    display: flex;
-    justify-content: space-between; /* Distributes space between the items */
-    align-items: center;
-    padding: 10px;
+.Bottom2 {
+  width: 60%;
+  height: 100%;
+  top: 0px;
+  font-weight: bolder;
+  border: 1px solid white;
+  font-family: "sans-serif";
 }
-.Bottom1{
-    width:20% ;/* Ensures equal width */
-    height:100%;
-    font-weight: bolder;
-    font-family: 'sans-serif';
-    color: aliceblue;
-    font-size: 40px;
-    text-align: center;
-    padding-top: 40px;
-    bottom: 0;
+.Bottom3 {
+  width: 20%; /* Ensures equal width */
+  height: 50%;
+  font-weight: bolder;
+  font-family: "sans-serif";
+  color: rgb(202, 202, 202);
+  font-size: 40px;
 }
-.Bottom2{
-    width:60% ;
-    height:100%;
-    top:0px;
-    font-weight: bolder;
-    font-family: 'sans-serif';
-}
-.Bottom3{
-    width:20% ;/* Ensures equal width */
-    height:50%;
-    font-weight: bolder;
-    font-family: 'sans-serif';
-    color: rgb(202, 202, 202);
-    font-size: 40px;
-}
-
 
 #hyperspace-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-  
-  .content, .Bottom {
-    position: relative;
-    z-index: 2; /* Ensure content is above video */
-  }
-  
-  .button-container {
-    margin-top: 20px;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.content,
+.Bottom {
+  position: relative;
+  z-index: 2; /* Ensure content is above video */
+}
+
+.button-container {
+  margin-top: 20px;
+}
