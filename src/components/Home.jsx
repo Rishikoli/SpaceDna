@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // For navigation
-import Header from "./Header";
+import Header from "./Navbar";
 import "./Home.css";
 import Astronaut from "./Astronaut";
 
